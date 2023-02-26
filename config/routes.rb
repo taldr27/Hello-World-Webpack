@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     get 'greetings/random', to: 'greetings#random'
-  end  
+  end 
 end

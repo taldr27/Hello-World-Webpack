@@ -1,7 +1,17 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Greeting from './Greeting';
 
 function App() {
-  return (<h1>111!</h1>);
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+        <h1>asd</h1>
+        <h1>asd</h1>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
