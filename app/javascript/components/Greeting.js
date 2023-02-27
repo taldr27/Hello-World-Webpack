@@ -1,13 +1,18 @@
-import React from 'react';
-import { useSelector  } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch  } from 'react-redux';
+import { fetchGreetings } from '../redux/greetings/Greetings';
 const Greeting = () => {
-  const initialState = useSelector((state) => state.greetings);
+  const greeting = useSelector((state) => state.greetings.message);
+  const dispatch = useDispatch();
 
-  console.log("Initial state:", initialState);
+  useEffect(() => {
+    dispatch(fetchGreetings());
+  }, [dispatch]);
 
   return (
     <div>
-      <h1>{`State => ${initialState}`}</h1>
+      <hr/>
+      <h2>{greeting}</h2>
     </div>
   )
 };
