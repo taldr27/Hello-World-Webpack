@@ -13,8 +13,8 @@ const greetingsSlice = createSlice({
 
 export const fetchGreetings = createAsyncThunk('FETCH_MESSAGE', () => axios.get(url)
   .then((response) => {
-    const greetings = response.data;
-    return greetings;
+    const greeting = response.data.message;
+    return greeting;
 }));
 
 export default greetingsSlice.reducer;
