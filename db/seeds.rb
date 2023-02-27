@@ -11,7 +11,11 @@ greetings = [
   "Hola, mundo!",
   "Tere maailm!",
   "Bonjour monde!",
-  "Прывітанне Сусвет!"
+  "Прывітанне Сусвет!",
+  "Hei maailma!",
+  "Сәлем Әлем!",
+  "Hej världen!",
+  "Sawubona Mhlaba!"
 ]
 
 greetings.each { |greeting| Greeting.create(greeting: greeting) }
