@@ -8,11 +8,6 @@ const greetingsSlice = createSlice({
   initialState: [],
   extraReducers: (builder) => {
     builder.addCase(fetchGreetings.fulfilled, (_, action) => action.payload);
-    builder.addCase(fetchGreetings.rejected, (state) => {
-      const newState = state;
-      newState.status = 'failed';
-    });
-    builder.addCase(fetchGreetings.pending, (_, action) => action.payload);
   },
 });
 
